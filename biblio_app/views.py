@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import navbaritem, libro, autor, categorias
+from .models import navbaritem, libro, autor, categoria
 
 # Create your views here.
 
@@ -22,6 +22,6 @@ def index3(request):
 
 def index4(request):
     navbaritems = navbaritem.objects.all()
-    categoriass = categorias.object(all)
-    context = {"navbaritems": navbaritems, "categoriass": categoriass}
+    categorias = categoria.object(all)
+    context = {"navbaritems": navbaritems, "categorias": categorias}
     return render(request, 'categorias/index4.html', context)

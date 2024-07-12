@@ -29,6 +29,25 @@
     <br>
     <h1>CATALOGO DE LIBROS</h1>
 
+
+    <div class="row">
+        {% for libro in libros %}
+        <div class="col-lg-6 mt-3">                
+            <div class="card-group">
+                <div class="card">                    
+                    <img src="{{ }}" width="200" height="300" class="card-img-top" alt="imagen del libro">
+                    <div class="card-body">                    
+                        <h5 class="card-title">{{ libro.titulolib }}</h5>
+                        <p class="card-text">{{ libro.descripcion }}</p>
+                        <p class="card-text"><small class="text-muted">{{ libro.aniopub }}</small></p>                   
+                    </div>
+                </div>                
+            </div>
+        </div>
+        {% endfor %}
+    </div> 
+
+
     <footer style="background-color: rgb(255, 255, 255); " >
         <div class="container mt-5">
             <div class="row">            

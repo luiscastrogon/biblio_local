@@ -10,18 +10,18 @@ def index(request):
 
 def index2(request):
     navbaritems = navbaritem.objects.all()
-    libros = libro.object.all()
+    libros = libro.objects.all()
     context = {"navbaritems": navbaritems, "libros": libros}
     return render(request, 'catalogo_libro/index2.html', context)
 
 def index3(request):
     navbaritems = navbaritem.objects.all()
-    autors = autor.object.all()
+    autors = autor.objects.all()
     context = {"navbaritems": navbaritems, "autors": autors}
     return render(request, 'catalago_autor/index3.html', context)
 
 def index4(request):
     navbaritems = navbaritem.objects.all()
-    categorias = categoria.object(all)
+    categorias = categoria.objects.all()
     context = {"navbaritems": navbaritems, "categorias": categorias}
     return render(request, 'categorias/index4.html', context)

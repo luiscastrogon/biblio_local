@@ -32,14 +32,13 @@
     <div class="container">
         <h1 class="title">CATALOGO DE AUTORES</h1>
         <div class="row">
-            {% for autor in autors %}
+            {% for N in autors %}
             <div class="col-md-4 mt-3" >
-                 <div class="card" style="width: 18rem;" data-aos="fade-up"
-                 data-aos-anchor-placement="top-bottom">
+                 <div class="card" style="width: 18rem;" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
                     <img src="https://picsum.photos/id/22/150/150" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title"> {{autor.nombreaut}} </h5>
-                      <p class="card-text"> {{autor.nacionalidad}} </p>
+                      <h5 class="card-title"> {{N.nombreaut}} </h5>
+                      <p class="card-text"> {{N.nacionalidad}} </p>
                       <a href="#" class="btn btn-primary">Ir a verlo</a>
                     </div>
                </div>

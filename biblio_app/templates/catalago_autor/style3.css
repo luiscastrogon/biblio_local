@@ -1,0 +1,9 @@
+#card1 .card{
+    transition: all 0.3s;
+}
+#card1 .card:hover{
+    transform: scale(1.15);
+}
+.title{
+    color: aqua;
+}

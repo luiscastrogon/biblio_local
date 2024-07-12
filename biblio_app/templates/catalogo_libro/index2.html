@@ -27,23 +27,48 @@
         </div>
     </nav>
     <br>
+ 
+<div class="container ml-3">
     <h1>CATALOGO DE LIBROS</h1>
-
-    <footer style="background-color: rgb(255, 255, 255); " >
-        <div class="container mt-5">
-            <div class="row">            
-                <div class="col-lg-6">
-                    <h5>Aqui comienza el FOOTER</h5>
-                    <p>info1</p>
-                    <p>info2</p>
-                </div>
-                <div class="col-lg-6">
-                    <h5>Derechos de autor</h5>
-                    <p>(c) 2024 libreria. <br> Todos los derechos reservados.</p>
-                </div>
+    <div class="row justify-ctontent-star mt-5">
+        {% for libro in libros %}
+           
+           <div class="col-md-4 mt-2">
+           
+            <div class="card ml-5" style="width: 18rem;">
+                <img src="https://picsum.photos/seed/picsum/200/100" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{libro.titulolib}}</h5>
+                  <p class="card-text">{{libro.descripcion}}</p>
+                  <p class="card-text"><small class="text-muted"></small>año de publicacion:{{libro.aniopub}}</p>
+                  <a href="#" class="btn btn-primary">ir al libro</a>
+                </div>    
             </div>
+           
+           </div>
+           {% endfor %}  
+          
+    </div>
+  
+
+</div>
+
+<footer style="background-color: rgb(0, 0, 0); " >
+    <div class="container mt-5">
+      <div class="row">            
+        <div class="col-lg-6">
+          <h5>Aqui comienza el FOOTER</h5>
+          <p>info1</p>
+          <p>info2</p>
         </div>
-    </footer>
+        <div class="col-lg-6">
+          <h5>Derechos de autor</h5>
+          <p>(c) 2024 libreria. <br> Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>

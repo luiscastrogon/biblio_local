@@ -11,12 +11,7 @@
   
 </head>
 <body>
-    Swal.fire({
-        title: 'Error!',
-        text: 'Do you want to continue',
-        icon: 'error',
-        confirmButtonText: 'Cool'
-      })
+
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #fcfbfb;">
         <a class="navbar-brand">
             <img src="" width="60" height="30" class="d-inline-block align-top" alt="">
@@ -41,14 +36,14 @@
 <div class="container ml-auto  mr-auto">
     <h1>CATEGORIAS DE LIBROS</h1>
     <div class="row">
-        {% for cateroria in categorias %}
+        {% for categoria in categorias %}
         <div class="col-md-12 mt-3">
             <div class="card  "  data-aos="zoom-out-right">
                 <img src="https://picsum.photos/seed/picsum/200/1000" height="400" width="800" class="card-img-top " alt="...">
                 <div class="card-body">
                 <h5 class="card-title">{{categoria.nombrecat}}</h5>
                 <p class="card-text">{{categoria.descripcion}}</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <p class="card-text"><small class="text-muted">subido hace 3 mins ago</small></p>
                 <a href="#" id="btn_categorias" class="btn btn-primary justify-content-end">ir a categoria</a>
                 </div>
            </div>

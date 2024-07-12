@@ -32,29 +32,18 @@
     <div class="container">
         <h1 class="title">CATALOGO DE AUTORES</h1>
         <div class="row">
-           
-            <div class="col-md-4">
-              
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
+            {% for autor in autors %}
+            <div class="col-md-4 mt-3">
+                 <div class="card" style="width: 18rem;">
+                    <img src="https://picsum.photos/id/22/150/150" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                      <h5 class="card-title">{{autor.Nombreaut}}</h5>
+                      <p class="card-text">{{autor.Nacionalidad}}</p>
+                      <a href="#" class="btn btn-primary">Ir a verlo</a>
                     </div>
                </div>
             </div>
-            <div class="col-md-4">
-              
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-               </div>
-            </div>
+            {% endfor %}
         
         </div>
   </div>
@@ -89,6 +78,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>AOS.init();</script>
-    
+
 </body>
 </html>

@@ -20,6 +20,8 @@ class libro(models.Model):
 class autor(models.Model):
     nombreaut = models.CharField(max_length=100)
     nacionalidad = models.CharField(max_length=50)
+    foto = models.ImageField(upload_to='static/images/', default='default.png')
+
 
     def __str__(self):
         return str(self.nombreaut)
@@ -27,6 +29,7 @@ class autor(models.Model):
 class categoria(models.Model):
     nombrecat = models.CharField(max_length=100)
     descripcion = models.CharField(max_length=200)
+    foto = models.ImageField(upload_to='static/images/', default='default.png')
 
     def __str__(self):
         return str(self.nombrecat)
